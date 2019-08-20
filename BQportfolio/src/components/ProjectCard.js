@@ -24,9 +24,10 @@ const CardContent = styled.div`
 	}
 `
 const Image = styled.div`
-	height: 300px;
+	height: 400px;
 	width: 100%;
 	background-size: cover;
+  background-position: center; 
 `
 const HeaderSubheader = styled.div`
 	padding-bottom: 16px;

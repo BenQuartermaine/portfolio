@@ -1,4 +1,5 @@
-import sgtBarry from './images/snr-sgt-barry.jpg'
+import eczeCover from './images/ecze-cover.png'
+import wholefoodsCover from './images/wholefoods-cover.png'
 // TOOLS IMAGES IMPORT
 import css from './portfolio-icons/css.png'
 import figma from './portfolio-icons/figma.png'
@@ -37,17 +38,13 @@ export const wholefoods = {
 	title: 'Organic Wholefoods',
 	description: 'How might we solve malnutrition?',
 	date: 'July, 2019',
-	imageOne: `${javascript}`,
-	imageTwo: `${sgtBarry}`,
-	imageThree: `${sgtBarry}`,
+	imageOne: `${wholefoodsCover}`,
 	link: 'Read on Medium'
 }
 export const ecze = {
 	title: 'Ecze',
 	description: 'How might we provide holistic solutions to Eczema for Eczema sufferers',
 	date: 'August, 2019',
-	imageOne: `${sgtBarry}`,
-	imageTwo: `${sgtBarry}`,
-	imageThree: `${sgtBarry}`,
-	link: 'Read on Medium'
+	imageOne: `${eczeCover}`,
+	link: 'View the Website'
 }
