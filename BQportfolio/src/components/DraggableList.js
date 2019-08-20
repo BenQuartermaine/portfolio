@@ -24,6 +24,7 @@ const fn = (order, down, originalIndex, curIndex, y) => index =>
   })
 
 
+
   return (
     <div className="content" style={{ height: items.length * 100 }}>
       {springs.map(({ zIndex, shadow, y, scale }, i) => (
