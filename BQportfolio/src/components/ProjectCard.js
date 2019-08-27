@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BodyText, HeaderText, LinkTextStyle } from '../utilities';
+import { BodyText, HeaderText, LinkTextStyle, colors } from '../utilities';
 import styled from 'styled-components';
 import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
@@ -16,12 +16,22 @@ const CardHeader = styled.div`
 		padding-bottom: 8px;
 	}
 `
-const CardContent = styled.div`
-	& div:last-child {
-		display: flex;
-		justify-content: flex-end;
-		align-itmes: center;
+const CardContent = styled.a`
+	text-decoration: none;
+	color: ${colors.black};
+`
+
+const HoverDiv = styled(animated.div)`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+
+	& div:first-child {
+		text-align: center;
 	}
+
 `
 const Image = styled.div`
 	height: 400px;
@@ -34,10 +44,13 @@ const HeaderSubheader = styled.div`
 `
 const LinkWrapper = styled(animated.div)`
 	padding-top: 16px;
-	& p { 
+
+	& .flex-end {
 		display: flex;
-		align-items: center;
+		justify-content: flex-end;
+		align-itmes: center;
 		padding: 0px;
+
 	}
 	& img {
 		margin-bottom: 0px;
@@ -48,6 +61,8 @@ const LinkWrapper = styled(animated.div)`
 const ProjectCard = ({ project }) => {
 		 const [isHovered, setHovered] = useState(false);
 		 const buttonAnimation = useSpring({ transform: isHovered ? `translate3d(10px, -5px, 0px)` : `translate3d(0px, 0px, 0px)` })
+		 const hoverAnimation = useSpring({ background: isHovered ? `rgba(255, 255, 255, 0.8)` : `rgba(255, 255, 255, 0)` })
+		 const textAnimation = useSpring({ opacity: isHovered ? `1` : `0` })
 	 
 	  return (
 	  <CardWrapper>
@@ -58,15 +73,26 @@ const ProjectCard = ({ project }) => {
 				  <BodyText>{project.description}</BodyText>
 			  </HeaderSubheader>
 			 </CardHeader>
-			 <CardContent>
-				<Image style={{backgroundImage: `url(${project.imageOne})`}}></Image>
-			  <LinkWrapper
-	     	 	style={buttonAnimation}
-	     	 	onMouseEnter={() => setHovered(true)}
-	     	 	onMouseLeave={() => setHovered(false)}
-			  >
-			  	<LinkTextStyle style={{textDecoration: 'underline'}}>
-			  	{project.link}	
+			 <CardContent
+			 	href={project.link}
+			 	target="_blank"
+    	 	onMouseEnter={() => setHovered(true)}
+	     	onMouseLeave={() => setHovered(false)}
+			 >
+				<Image style={{backgroundImage: `url(${project.imageOne})`}}>
+					<HoverDiv style={hoverAnimation}>
+					<animated.div style={textAnimation}>
+						<BodyText>In this Project I contributed</BodyText>
+						<HeaderText>UX, Frontend Development</HeaderText>
+					</animated.div>
+					</HoverDiv>
+				</Image>
+			  <LinkWrapper style={buttonAnimation}>
+			  	<LinkTextStyle 
+			  		style={{textDecoration: 'underline'}}
+			  		className="flex-end"
+			  	>
+			  	{project.linkText}	
 			  		<img src={diagonalArrow} alt=""/>
 			  	</LinkTextStyle>
 			  </LinkWrapper>

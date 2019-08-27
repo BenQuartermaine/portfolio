@@ -1,5 +1,6 @@
 import eczeCover from './images/ecze-cover.png'
 import wholefoodsCover from './images/wholefoods-cover.png'
+import corosterCover from './images/coroster-cover.jpeg'
 // TOOLS IMAGES IMPORT
 import css from './portfolio-icons/css.png'
 import figma from './portfolio-icons/figma.png'
@@ -36,15 +37,27 @@ export const socialIcons = [mailIcon, github, medium, linkedin];
 // PROJECTS
 export const wholefoods = {
 	title: 'Organic Wholefoods',
-	description: 'How might we solve malnutrition?',
-	date: 'July, 2019',
+	description: 'How might we improve access to specific food items for people following a low-FODMAP diet?',
+	date: 'April, 2019',
 	imageOne: `${wholefoodsCover}`,
-	link: 'Read on Medium'
+	linkText: 'Read on Medium',
+	link: 'https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1'
 }
 export const ecze = {
 	title: 'Ecze',
-	description: 'How might we provide holistic solutions to Eczema for Eczema sufferers',
-	date: 'August, 2019',
+	description: 'How might we improve access to holistic solutions for Eczema so that sufferers can reduce their eczema related anxiety?',
+	date: 'July, 2019',
 	imageOne: `${eczeCover}`,
-	link: 'View the Website'
+	linkText: 'View the Website',
+	link: 'https://ecze.co'
 }
+export const coroster = {
+	title: 'CoRoster',
+	description: 'How might we improve the rostering experience for Police Officers so that they enjoy a better work-life balance?',
+	date: 'September, 2019',
+	imageOne: `${corosterCover}`,
+	linkText: 'Read on Medium',
+	link: 'https://medium.com/@BQWA/ux-case-study-shift-work-police-officers-3c4ac0cdaa42'
+}
+
+
