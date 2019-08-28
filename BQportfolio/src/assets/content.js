@@ -22,13 +22,8 @@ export const about = {
 	title: 'About',
 	content: "Welcome to page 2 and how it is we're going to Welcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going to"
 }
-export const problems = {
-	title: 'Problems',
-	introduction: "A continuously growing list of problems I'd like to solve.",
-	content: ['How might we reduce plastic usage?', 'How might we improve mental health across public sector workers?', 'How might we improve the post bootcamp experience for Junior Developers']
-}
 
-export const tools = [css, figma, gatsby, html, javascript, medium, reactSpring, react, styledComponents];
+export const tools = [css, figma, html, javascript, medium, react, styledComponents];
 export const socialIcons = [mailIcon, github, medium, linkedin];
 
 
@@ -41,7 +36,8 @@ export const wholefoods = {
 	date: 'April, 2019',
 	imageOne: `${wholefoodsCover}`,
 	linkText: 'Read on Medium',
-	link: 'https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1'
+	link: 'https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1',
+	tags: ['UX Design,', 'Wireframes']
 }
 export const ecze = {
 	title: 'Ecze',
@@ -49,7 +45,8 @@ export const ecze = {
 	date: 'July, 2019',
 	imageOne: `${eczeCover}`,
 	linkText: 'View the Website',
-	link: 'https://ecze.co'
+	link: 'https://ecze.co',
+	tags: ['Frontend Development']
 }
 export const coroster = {
 	title: 'CoRoster',
@@ -57,7 +54,8 @@ export const coroster = {
 	date: 'September, 2019',
 	imageOne: `${corosterCover}`,
 	linkText: 'Read on Medium',
-	link: 'https://medium.com/@BQWA/ux-case-study-shift-work-police-officers-3c4ac0cdaa42'
+	link: 'https://medium.com/@BQWA/ux-case-study-shift-work-police-officers-3c4ac0cdaa42',
+	tags: ['UX Design,', 'Wireframes']
 }
 
 

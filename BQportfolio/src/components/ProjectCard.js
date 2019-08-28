@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BodyText, HeaderText, LinkTextStyle, colors } from '../utilities';
+import { BodyText, HeaderText, SubheaderText, LinkTextStyle, colors } from '../utilities';
 import styled from 'styled-components';
 import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
@@ -43,8 +43,8 @@ const HeaderSubheader = styled.div`
 	padding-bottom: 16px;
 `
 const LinkWrapper = styled(animated.div)`
-	padding-top: 16px;
-
+	padding-top: 24px;
+	padding-right: 8px;
 	& .flex-end {
 		display: flex;
 		justify-content: flex-end;
@@ -60,9 +60,10 @@ const LinkWrapper = styled(animated.div)`
 
 const ProjectCard = ({ project }) => {
 		 const [isHovered, setHovered] = useState(false);
-		 const buttonAnimation = useSpring({ transform: isHovered ? `translate3d(10px, -5px, 0px)` : `translate3d(0px, 0px, 0px)` })
-		 const hoverAnimation = useSpring({ background: isHovered ? `rgba(255, 255, 255, 0.8)` : `rgba(255, 255, 255, 0)` })
+		 const buttonAnimation = useSpring({ transform: isHovered ? `translate3d(8px, -8px, 0px)` : `translate3d(0px, 0px, 0px)` })
+		 const hoverAnimation = useSpring({ background: isHovered ? `rgba(0, 0, 0, 1)` : `rgba(255, 255, 255, 0)` })
 		 const textAnimation = useSpring({ opacity: isHovered ? `1` : `0` })
+		 const underlineAnimation = useSpring({ textDecoration: isHovered ? `underline` : `none` })
 	 
 	  return (
 	  <CardWrapper>
@@ -82,14 +83,13 @@ const ProjectCard = ({ project }) => {
 				<Image style={{backgroundImage: `url(${project.imageOne})`}}>
 					<HoverDiv style={hoverAnimation}>
 					<animated.div style={textAnimation}>
-						<BodyText>In this Project I contributed</BodyText>
-						<HeaderText>UX, Frontend Development</HeaderText>
+						<HeaderText style={{color: `${colors.almostWhite}`}}>{project.tags.map(tag => `${tag} `)}</HeaderText>
 					</animated.div>
 					</HoverDiv>
 				</Image>
 			  <LinkWrapper style={buttonAnimation}>
 			  	<LinkTextStyle 
-			  		style={{textDecoration: 'underline'}}
+			  		style={underlineAnimation}
 			  		className="flex-end"
 			  	>
 			  	{project.linkText}	

@@ -3,6 +3,7 @@ import React from "react"
 import styled from 'styled-components'
 import { HeaderText, colors, media } from '../utilities'
 import BurgerMenu from './BurgerMenu'
+import Navigation from './Navigation'
 
 
 const HeaderWrapper = styled.header`
@@ -23,12 +24,31 @@ const HeaderWrapper = styled.header`
   `}
 `;
 
+const BurgerWrapper = styled.div`
+  display: none;
+  ${media.small`
+    display: block;
+  `}
+`;
+
+const NavigationWrapper = styled.div`
+  display: block;
+  ${media.small`
+    display: none;
+  `}
+`;
+
 
 const Header = ({ path }) => {
   return (
     <HeaderWrapper>
       <HeaderText><Link to="/">BQ</Link></HeaderText>
-      <BurgerMenu path={path} />
+      <NavigationWrapper>
+        <Navigation path={path} />
+      </NavigationWrapper>
+      <BurgerWrapper>
+        <BurgerMenu path={path} />
+      </BurgerWrapper>
     </HeaderWrapper>
   )
 }
