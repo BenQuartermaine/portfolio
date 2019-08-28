@@ -1,53 +1,37 @@
 import React from "react"
-import { HeroTextUnderlined, BodyText } from '../utilities'
+import { HeroText, HeaderText, SubheaderText, BodyText } from '../utilities'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import IconGrid from "../components/IconGrid"
 import SocialMedia from "../components/SocialMedia"
 import styled from 'styled-components'
-import { about, problems } from '../assets/content'
+import { about } from '../assets/content'
 
-const SectionWrapper = styled.section`
-  max-width: 700px;
+const SectionWrapper = styled.div`
+  max-width: 960px;
   margin: 0 auto;
-  padding-bottom: 3em;
+  padding: 3em 0em;
 `
 const ContentWrapper = styled.div`
-  padding-top: 2em;
   
 `
-const ProblemList = styled.div`
-  padding: 16px 0px;
-`
+
 const About = props => (
   <Layout props={props}>
     <SEO title="About Page" />
     <SectionWrapper>
-    	<HeroTextUnderlined>{about.title}</HeroTextUnderlined>
-    	<ContentWrapper>
-    		<BodyText>{about.content}</BodyText>
-    	</ContentWrapper>
+      <HeroText>{about.title}</HeroText>
+    	<HeaderText style={{fontWeight: '400'}}>{about.content}</HeaderText>
     </SectionWrapper>
     <SectionWrapper>
-        <HeroTextUnderlined>Contact</HeroTextUnderlined>
+        <HeroText>Contact</HeroText>
         <ContentWrapper>
             <SocialMedia />
         </ContentWrapper>
     </SectionWrapper>
-    <SectionWrapper>
-        <HeroTextUnderlined>{problems.title}</HeroTextUnderlined>
-        <ContentWrapper>
-        <BodyText>{problems.introduction}</BodyText>
-            <ProblemList>
-              <ul>
-                  {problems.content.map((problem, key) => <li key={key}><BodyText>{problem}</BodyText></li>)}
-              </ul>
-            </ProblemList>
-        </ContentWrapper>
-    </SectionWrapper>
 
     <SectionWrapper>
-        <HeroTextUnderlined>Tools</HeroTextUnderlined>
+        <HeroText>Tools</HeroText>
         <ContentWrapper>
             <IconGrid />
         </ContentWrapper>

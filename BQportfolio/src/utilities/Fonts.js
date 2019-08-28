@@ -2,10 +2,12 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 import { colors } from './Colors'
 import { media } from './Breakpoints'
+import { animated } from 'react-spring'
 
 export const fontsize = {
 	hero: '52px',
 	header: '36px',
+	subheader: '24px',
 	body: '18px'
 }
 
@@ -21,16 +23,9 @@ export const HeroText = styled.h1`
 	color: ${props => props.color};
 	font-family: 'Avenir';
 
-	${media.small`
+	${media.med`
 		font-size: ${fontsize.header};
 	`}
-`;
-
-export const HeroTextUnderlined = styled(HeroText)`
-	border-bottom: 2px solid ${colors.black};
-	margin: 0 auto;
-	max-width: 960px;
-	padding-top: 32px;
 `;
 
 export const HeaderText = styled.h1`
@@ -38,6 +33,9 @@ export const HeaderText = styled.h1`
 	font-size: ${fontsize.header};
 	font-family: 'Avenir';
 
+	${media.med`
+		font-size: ${fontsize.subheader};
+	`}
 `;
 
 export const BodyText = styled.p`
@@ -46,9 +44,15 @@ export const BodyText = styled.p`
 	font-family: 'Georgia';
 `;
 
+export const SubheaderText = styled.p`
+	${presets}
+	font-size: ${fontsize.subheader};
+	font-family: 'Avenir';
+`;
+
 export const LinkText = styled(Link)`
 	${presets}
-	font-family: 'Georgia';
+	font-family: 'Avenir';
 	font-size: ${fontsize.body};
 	margin: 0em;
 	list-style: none;
@@ -63,7 +67,7 @@ export const LinkText = styled(Link)`
 `;
 
 // NON GATSBY LINK TEXT
-export const LinkTextStyle = styled.p`
+export const LinkTextStyle = styled(animated.p)`
 	${presets}
 	font-family: 'Georgia';
 	font-size: ${fontsize.body};

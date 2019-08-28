@@ -8,7 +8,6 @@ import { wholefoods, ecze, coroster } from '../assets/content'
 const Work = props => {
 	return (
 		<Layout props={ props }>
-			<HeroTextUnderlined>Work</HeroTextUnderlined>
 			<ProjectCard project={ coroster } />
 			<ProjectCard project={ ecze } />
 			<ProjectCard project={ wholefoods } />
