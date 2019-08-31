@@ -20,7 +20,7 @@ import mailIcon from '../assets/portfolio-icons/mail-icon.svg'
 // ABOUT PAGE
 export const about = {
 	title: 'About',
-	content: "Welcome to page 2 and how it is we're going to Welcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going to"
+	content: ['I got my start in UX design at Mandala Group, a company I co-founded in China with two highly inspirational individuals.', 'During my time at Mandala Group I undertook two key roles. The first was UX design lead. We ran 4-week idea incubation programs that allowed entrepreneurs, designers and coders from all across the world to come to China and work on one of our current projects.', 'The second role was product designer. Leading a small team of researchers and designers through rural Hunan, we spent weeks at a time collecting data, interviewing villagers and synthesizing these trips into tangible design briefs.','As a group we focused heavily on finding solutions for the Left Behind Children issue. The result was MoFarm.']
 }
 
 export const tools = [css, figma, html, javascript, medium, react, styledComponents];

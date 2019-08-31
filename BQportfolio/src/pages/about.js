@@ -1,5 +1,5 @@
 import React from "react"
-import { HeroText, HeaderText, SubheaderText, BodyText } from '../utilities'
+import { HeroText, HeaderText, SubheaderText, BodyText, fontsize } from '../utilities'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import IconGrid from "../components/IconGrid"
@@ -21,12 +21,17 @@ const About = props => (
     <SEO title="About Page" />
     <SectionWrapper>
       <HeroText>{about.title}</HeroText>
-    	<HeaderText style={{fontWeight: '400'}}>{about.content}</HeaderText>
+      {about.content.map(text => 
+    	   <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>{text}</HeaderText>
+        )}
     </SectionWrapper>
     <SectionWrapper>
         <HeroText>Contact</HeroText>
         <ContentWrapper>
-            <SocialMedia />
+          <HeaderText style={{fontWeight: '400'}}>
+            I write sporadically on <a style={{color: 'black'}} href="">Medium</a>, push all my code to <a style={{color: 'black'}} href="">Github</a> and fluff myself up on <a style={{color: 'black'}} href="">LinkedIn</a>.<br /><br /> For UX design projects, teardowns, coffee and other enquiries, drop me an <a style={{color: 'black'}} href="mailto: ben.quartermaiune3@gmail.com">Email</a>.
+          </HeaderText>
+
         </ContentWrapper>
     </SectionWrapper>
 
