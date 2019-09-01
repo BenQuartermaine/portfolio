@@ -38,12 +38,10 @@ const NavigationWrapper = styled.div`
   `}
 `;
 
-const num = window.innerWidth;
-
 const Header = ({ path }) => {
   return (
     <HeaderWrapper>
-      <HeaderText style={{fontSize: '36px'}}><Link to="/">{num > 800 ? 'Ben Quartermaine' : 'BQ'}</Link></HeaderText>
+      <HeaderText style={{fontSize: '36px'}}><Link to="/">BQ</Link></HeaderText>
       <NavigationWrapper>
         <Navigation path={path} />
       </NavigationWrapper>

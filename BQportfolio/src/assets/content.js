@@ -20,10 +20,19 @@ import mailIcon from '../assets/portfolio-icons/mail-icon.svg'
 // ABOUT PAGE
 export const about = {
 	title: 'About',
-	content: ['I got my start in UX design at Mandala Group, a company I co-founded in China with two highly inspirational individuals.', 'During my time at Mandala Group I undertook two key roles. The first was UX design lead. We ran 4-week idea incubation programs that allowed entrepreneurs, designers and coders from all across the world to come to China and work on one of our current projects.', 'The second role was product designer. Leading a small team of researchers and designers through rural Hunan, we spent weeks at a time collecting data, interviewing villagers and synthesizing these trips into tangible design briefs.','As a group we focused heavily on finding solutions for the Left Behind Children issue. The result was MoFarm.']
+	content: ['Hi there. I’m Ben, a designer who codes. Previously I worked as a product designer for Mandala Group in China.', 'Currently I build web apps for Dark Green Design Studio and teach frontend development at Le Wagon Melbourne.', 'I’m passionate about building rigorous and scalable design systems that entire organisations can understand and benefit from.']
+}
+export const doDonts = {
+	title: 'Do / Do Not',
+	content: ['I do enjoy the chaotic process of learning.', "I do not enjoy long drawn out meetings that talk in circles and have no clear objective."]
 }
 
-export const tools = [css, figma, html, javascript, medium, react, styledComponents];
+export const whatElse = {
+	title: 'Other Than Work',
+	content: ['I like to boulder, surf and stay pretty active. Exploring the mental health benefits of plant medicine and cooking my way through Ottolenghi’s Simple are also big on my todo list.', "While living in China I put a lot of time into studying Mandarin, so I aggressively try to maintain by learning Chinese pop songs and eves dropping in the CBD.", "At the moment my interests are around design systems, micro dosing, React.js and fighting food packaging waste. I’ve got an idea, if you want to hear it!"]
+}
+
+export const tools = [css, figma, html, javascript, medium, react, styledComponents, gatsby, reactSpring];
 export const socialIcons = [mailIcon, github, medium, linkedin];
 
 
@@ -37,7 +46,7 @@ export const wholefoods = {
 	imageOne: `${wholefoodsCover}`,
 	linkText: 'Read on Medium',
 	link: 'https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1',
-	tags: ['UX Design,', 'Wireframes']
+	tags: ['UX Design']
 }
 export const ecze = {
 	title: 'Ecze',
@@ -55,7 +64,7 @@ export const coroster = {
 	imageOne: `${corosterCover}`,
 	linkText: 'Read on Medium',
 	link: 'https://medium.com/@BQWA/ux-case-study-shift-work-police-officers-3c4ac0cdaa42',
-	tags: ['UX Design,', 'Wireframes']
+	tags: ['UX Design']
 }
 
 

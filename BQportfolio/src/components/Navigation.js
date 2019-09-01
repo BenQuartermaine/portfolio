@@ -25,7 +25,7 @@ const Navigation = ({ color, path }) => {
 	`
 	const navArray = [
 		{ title: "Work", link: "/work/"},
-		{ title: "About", link: "/about/"},
+		{ title: "About / Contact", link: "/about/"},
 	]
 
 	return (
@@ -35,7 +35,7 @@ const Navigation = ({ color, path }) => {
 					<LinkText 
 						key={i} 
 						to='/' 
-						style={{borderBottom: `2px solid ${colors.almostWhite}`, width: '100%'}}
+						style={{borderBottom: `2px solid ${colors.almostWhite}`}}
 					>
 						{`${item.title}`}{" "}
 					</LinkText>

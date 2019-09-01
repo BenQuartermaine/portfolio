@@ -7,6 +7,7 @@ const IconWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(130px, 1fr) );
     grid-gap: 16px;
+    max-width: 760px;
 `
 const Icon = styled.div`
     width: 130px;

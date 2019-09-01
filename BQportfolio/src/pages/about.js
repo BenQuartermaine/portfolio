@@ -5,12 +5,12 @@ import SEO from "../components/seo"
 import IconGrid from "../components/IconGrid"
 import SocialMedia from "../components/SocialMedia"
 import styled from 'styled-components'
-import { about } from '../assets/content'
+import { about, doDonts, whatElse } from '../assets/content'
 
 const SectionWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 3em 0em;
+  padding: 40px 0em;
 `
 const ContentWrapper = styled.div`
   
@@ -26,19 +26,30 @@ const About = props => (
         )}
     </SectionWrapper>
     <SectionWrapper>
+      <HeroText>{whatElse.title}</HeroText>
+      {whatElse.content.map(text => 
+         <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>{text}</HeaderText>
+        )}
+    </SectionWrapper>
+    <SectionWrapper>
+      <HeroText>{doDonts.title}</HeroText>
+      {doDonts.content.map(text => 
+         <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>{text}</HeaderText>
+        )}
+    </SectionWrapper>
+    <SectionWrapper>
         <HeroText>Contact</HeroText>
         <ContentWrapper>
-          <HeaderText style={{fontWeight: '400'}}>
+          <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>
             I write sporadically on <a style={{color: 'black'}} target="_blank" href="https://medium.com/@BQWA">Medium</a>, push all my code to <a style={{color: 'black'}} target="_blank" href="https://github.com/BenQuartermaine">Github</a> and fluff myself up on <a style={{color: 'black'}} target="_blank" href="https://www.linkedin.com/in/benjaminquartermaine/">LinkedIn</a>.<br /><br /> For frontend design projects, coffee and other enquiries, drop me an <a style={{color: 'black'}} target="_blank" href="mailto: ben.quartermaiune3@gmail.com">Email</a>.
           </HeaderText>
-
         </ContentWrapper>
     </SectionWrapper>
 
     <SectionWrapper>
         <HeroText>Tools</HeroText>
         <ContentWrapper>
-            <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>A few regulars tools in the toolbelt</HeaderText>
+            <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>A few regular tools in the toolbelt</HeaderText>
             <IconGrid />
         </ContentWrapper>
     </SectionWrapper>
