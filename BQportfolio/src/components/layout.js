@@ -3,7 +3,14 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./Footer"
+import styled from 'styled-components'
+import { colors } from '../utilities'
 import "./layout.css"
+
+
+const Background = styled.div`
+  background: ${colors.almostWhite};
+`
 
 const Layout = ({ children, props }) => {
   const data = useStaticQuery(graphql`
@@ -17,11 +24,11 @@ const Layout = ({ children, props }) => {
   `)
 
   return (
-    <>
+    <Background>
       <Header siteTitle={data.site.siteMetadata.title} path={props.path} />
       <main style={{margin: '16px'}}>{children}</main>
       <Footer />
-    </>
+    </Background>
   )
 }
 
