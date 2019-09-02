@@ -54,7 +54,7 @@ export const ecze = {
 	date: 'July, 2019',
 	imageOne: `${eczeCover}`,
 	linkText: 'View the Website',
-	link: 'https://ecze.co',
+	link: 'http://ecze.netlify.com/',
 	tags: ['Frontend Development']
 }
 export const coroster = {

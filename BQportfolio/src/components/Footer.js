@@ -14,7 +14,7 @@ const FooterWrapper = styled.footer`
 
 const Footer = () => (
   <FooterWrapper>
-  	<BodyText>Designed and built by Dark Green Design</BodyText>
+  	<BodyText>Designed and built by <a style={{color: `${colors.almostWhite}`}} target="_blank" href="http://www.darkgreen.design/">Dark Green Design</a></BodyText>
   </FooterWrapper>
 )
 
