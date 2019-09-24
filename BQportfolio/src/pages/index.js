@@ -5,12 +5,13 @@ import Navigation from "../components/Navigation"
 import VideoBackground from "../components/VideoBackground"
 import { colors, media } from "../utilities"
 import styled from "styled-components"
+import Div100vh from 'react-div-100vh';
 
 
-const windowHeight = window.innerHeight;
+
 
 const IndexWrapper = styled.div`
-  height: ${windowHeight}px;
+  height: 100vh;
   width: 100vw;
   background: ${colors.black};
   padding: 2em;
@@ -44,16 +45,18 @@ const NavigationWrapper = styled.div`
 
 
 const IndexPage = props => (
-  <IndexWrapper>
-    <LandingText />
-    <NavigationWrapper>
-      <Navigation path={ props.path } />
-    </NavigationWrapper>
-    <BurgerWrapper>
-      <BurgerMenu path={ props.path } /> 
-    </BurgerWrapper>
-    <VideoBackground />
-  </IndexWrapper>
+  <Div100vh>
+    <IndexWrapper>
+      <LandingText />
+      <NavigationWrapper>
+        <Navigation path={ props.path } />
+      </NavigationWrapper>
+      <BurgerWrapper>
+        <BurgerMenu path={ props.path } /> 
+      </BurgerWrapper>
+      <VideoBackground />
+    </IndexWrapper>
+  </Div100vh>
 )
 
 export default IndexPage
