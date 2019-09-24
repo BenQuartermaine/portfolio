@@ -17,7 +17,7 @@ const IndexWrapper = styled.div`
   ${media.med`
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-between;
+    // justify-content: space-between;
   `}
 
 `

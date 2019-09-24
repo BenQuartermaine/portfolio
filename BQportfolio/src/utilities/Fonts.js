@@ -6,7 +6,7 @@ import { animated } from 'react-spring'
 
 export const fontsize = {
 	hero: '52px',
-	header: '36px',
+	header: '32px',
 	subheader: '24px',
 	body: '18px'
 }
@@ -41,7 +41,7 @@ export const HeaderText = styled.h1`
 export const BodyText = styled.p`
 	${presets}
 	font-size: ${fontsize.body};
-	font-family: 'Georgia';
+	font-family: 'Avenir';
 `;
 
 export const SubheaderText = styled.p`
@@ -69,7 +69,7 @@ export const LinkText = styled(Link)`
 // NON GATSBY LINK TEXT
 export const LinkTextStyle = styled(animated.p)`
 	${presets}
-	font-family: 'Georgia';
+	font-family: 'Avenir';
 	font-size: ${fontsize.body};
 	margin: 0em;
 	list-style: none;

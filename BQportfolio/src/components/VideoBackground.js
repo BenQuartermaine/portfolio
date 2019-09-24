@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 import iteration from '../assets/iteration.mp4'
+import { media } from '../utilities'
 
 const VideoWrapper = styled.div`
 	position: absolute;
@@ -11,6 +12,10 @@ const VideoWrapper = styled.div`
 	right: 0;
 	top: 0;
 	bottom: 0;
+
+	${media.small`
+		display: none;
+	`}
 `;
 
 const videoStyles = {
