@@ -6,8 +6,11 @@ import VideoBackground from "../components/VideoBackground"
 import { colors, media } from "../utilities"
 import styled from "styled-components"
 
+
+const windowHeight = window.innerHeight;
+
 const IndexWrapper = styled.div`
-  height: 100vh;
+  height: ${windowHeight}px;
   width: 100vw;
   background: ${colors.black};
   padding: 2em;

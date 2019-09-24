@@ -25,6 +25,7 @@ export const HeroText = styled.h1`
 
 	${media.med`
 		font-size: ${fontsize.header};
+		font-weight: 400;
 	`}
 `;
 
