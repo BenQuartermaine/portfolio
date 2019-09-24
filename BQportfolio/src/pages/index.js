@@ -15,6 +15,8 @@ const IndexWrapper = styled.div`
   background: ${colors.black};
   padding: 2em;
   display: flex;
+  justify-content: space-between;
+
   
   ${media.med`
     display: flex;
