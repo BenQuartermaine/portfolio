@@ -1,6 +1,7 @@
 import eczeCover from './images/ecze-cover.png'
-import wholefoodsCover from './images/wholefoods-cover.png'
-import corosterCover from './images/coroster-cover.jpeg'
+import wholefoodsCover from './images/organicWholefoods.png'
+import corosterCover from './images/corosterCover.png'
+import mofarmCover from './images/mofarmCover.png'
 // TOOLS IMAGES IMPORT
 import css from './portfolio-icons/css.png'
 import figma from './portfolio-icons/figma.png'
@@ -21,10 +22,6 @@ import mailIcon from '../assets/portfolio-icons/mail-icon.svg'
 export const about = {
 	title: 'About',
 	content: ['Hi there. I’m Ben, a designer who codes. Previously I worked as a product designer for Mandala Group in China.', 'Currently I build web apps for Dark Green Design Studio and teach frontend development at Le Wagon Melbourne.', 'I’m passionate about building rigorous and scalable design systems that entire organisations can understand and benefit from.']
-}
-export const doDonts = {
-	title: 'Do / Do Not',
-	content: ['I do enjoy the chaotic process of learning.', "I do not enjoy long drawn out meetings that talk in circles and have no clear objective."]
 }
 
 export const whatElse = {
@@ -65,6 +62,15 @@ export const coroster = {
 	linkText: 'Read on Medium',
 	link: 'https://medium.com/@BQWA/ux-case-study-shift-work-police-officers-3c4ac0cdaa42',
 	tags: ['UX Design']
+}
+export const mofarm = {
+	title: 'MoFarm',
+	description: 'How applying a Western model to a Chinese social problem didn’t work',
+	date: 'October, 2018',
+	imageOne: `${mofarmCover}`,
+	linkText: 'Read on Medium',
+	link: 'https://medium.com/@BQWA/ux-case-study-mofarm-bff51d2f4992',
+	tags: ['UX Research']
 }
 
 

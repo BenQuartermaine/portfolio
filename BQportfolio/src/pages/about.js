@@ -32,12 +32,6 @@ const About = props => (
         )}
     </SectionWrapper>
     <SectionWrapper>
-      <HeroText>{doDonts.title}</HeroText>
-      {doDonts.content.map(text => 
-         <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>{text}</HeaderText>
-        )}
-    </SectionWrapper>
-    <SectionWrapper>
         <HeroText>Contact</HeroText>
         <ContentWrapper>
           <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>

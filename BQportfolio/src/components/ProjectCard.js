@@ -5,7 +5,7 @@ import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
 
 const CardWrapper = styled.div`
-	max-width: 960px;
+	max-width: 720px;
 	margin: 0 auto;
 	padding: 32px 0em;
 `
@@ -34,8 +34,8 @@ const HoverDiv = styled(animated.div)`
 
 `
 const Image = styled.div`
-	height: 400px;
 	width: 100%;
+  height: 400px;
 	background-size: cover;
   background-position: center; 
 `
@@ -48,9 +48,8 @@ const LinkWrapper = styled(animated.div)`
 	& .flex-end {
 		display: flex;
 		justify-content: flex-end;
-		align-itmes: center;
+		align-items: center;
 		padding: 0px;
-
 	}
 	& img {
 		margin-bottom: 0px;
@@ -63,7 +62,7 @@ const ProjectCard = ({ project }) => {
 		 const buttonAnimation = useSpring({ transform: isHovered ? `translate3d(8px, -8px, 0px)` : `translate3d(0px, 0px, 0px)` })
 		 const hoverAnimation = useSpring({ background: isHovered ? `rgba(0, 0, 0, 1)` : `rgba(255, 255, 255, 0)` })
 		 const textAnimation = useSpring({ opacity: isHovered ? `1` : `0` })
-		 const underlineAnimation = useSpring({ textDecoration: isHovered ? `underline` : `none` })
+		 const underlineAnimation = useSpring({ textDecoration: isHovered ? `underline` : `underline` })
 	 
 	  return (
 	  <CardWrapper>

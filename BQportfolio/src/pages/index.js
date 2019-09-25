@@ -16,21 +16,28 @@ const IndexWrapper = styled.div`
   padding: 2em;
   display: flex;
   justify-content: space-between;
-
+  
   
   ${media.med`
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    padding: 1em;
   `}
-
 `
-
 const BurgerWrapper = styled.div`
   display: none;
   ${media.small`
     display: flex;
     justify-content: flex-end;
+  `}
+`;
+const PaddingTop = styled.div`
+  padding-top: 0em;
+  display: block;
+  z-index: 1;
+  ${media.med`
+    padding-top: 3em;
   `}
 `;
 
@@ -46,7 +53,9 @@ const NavigationWrapper = styled.div`
 
 const IndexPage = props => (
   <IndexWrapper>
-    <LandingText />
+    <PaddingTop>
+      <LandingText />
+    </PaddingTop>
     <NavigationWrapper>
       <Navigation path={ props.path } />
     </NavigationWrapper>
