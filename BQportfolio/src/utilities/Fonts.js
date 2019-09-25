@@ -49,6 +49,8 @@ export const SubheaderText = styled.p`
 	${presets}
 	font-size: ${fontsize.subheader};
 	font-family: 'Avenir';
+	color: ${props => props.color};
+
 `;
 
 export const LinkText = styled(Link)`
