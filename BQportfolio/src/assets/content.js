@@ -38,7 +38,7 @@ export const socialIcons = [mailIcon, github, medium, linkedin];
 // PROJECTS
 export const wholefoods = {
 	title: 'Organic Wholefoods',
-	description: 'How might we improve access to specific food items for people following a low-FODMAP diet?',
+	description: 'How might we improve access to products for people following a low-FODMAP diet so that they can better meet their dieting requirements?',
 	date: 'April, 2019',
 	imageOne: `${wholefoodsCover}`,
 	linkText: 'Read on Medium',
@@ -65,7 +65,7 @@ export const coroster = {
 }
 export const mofarm = {
 	title: 'MoFarm',
-	description: 'How applying a Western model to a Chinese social problem didn’t work',
+	description: 'The process of applying a Western growth model to a Chinese social problem and how it didn’t work',
 	date: 'October, 2018',
 	imageOne: `${mofarmCover}`,
 	linkText: 'Read on Medium',
