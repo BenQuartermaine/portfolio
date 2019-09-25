@@ -36,6 +36,7 @@ export const HeaderText = styled.h1`
 
 	${media.med`
 		font-size: ${fontsize.subheader};
+		font-weight: 400;
 	`}
 `;
 
