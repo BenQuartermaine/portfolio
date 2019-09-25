@@ -35,7 +35,7 @@ const About = props => (
         <HeroText>Contact</HeroText>
         <ContentWrapper>
           <HeaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>
-            I write sporadically on <a style={{color: 'black'}} target="_blank" href="https://medium.com/@BQWA">Medium</a>, push all my code to <a style={{color: 'black'}} target="_blank" href="https://github.com/BenQuartermaine">Github</a> and fluff myself up on <a style={{color: 'black'}} target="_blank" href="https://www.linkedin.com/in/benjaminquartermaine/">LinkedIn</a>.<br /><br /> For frontend design projects, coffee and other enquiries, drop me an <a style={{color: 'black'}} target="_blank" href="mailto: ben.quartermaiune3@gmail.com">Email</a>.
+            I write sporadically on <a style={{color: 'black'}} target="_blank" href="https://medium.com/@BQWA">Medium</a>, push all my code to <a style={{color: 'black'}} target="_blank" href="https://github.com/BenQuartermaine">Github</a> and fluff myself up on <a style={{color: 'black'}} target="_blank" href="https://www.linkedin.com/in/benjaminquartermaine/">LinkedIn</a>.<br /><br /> For UX design projects, coffee and other enquiries, drop me an <a style={{color: 'black'}} target="_blank" href="mailto: ben.quartermaiune3@gmail.com">Email</a>.
           </HeaderText>
         </ContentWrapper>
     </SectionWrapper>

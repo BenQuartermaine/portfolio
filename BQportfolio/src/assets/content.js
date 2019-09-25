@@ -21,12 +21,12 @@ import mailIcon from '../assets/portfolio-icons/mail-icon.svg'
 // ABOUT PAGE
 export const about = {
 	title: 'About',
-	content: ['Hi there. I’m Ben, a designer who codes. Previously I worked as a product designer for Mandala Group in China.', 'Currently I build web apps for Dark Green Design Studio and teach frontend development at Le Wagon Melbourne.', 'I’m passionate about building rigorous and scalable design systems that entire organisations can understand and benefit from.']
+	content: ['Hi there. I’m Ben, a designer who codes. Previously I worked as a product designer for Mandala Group in Shanghai, China.', 'Currently, I design and build web apps for Dark Green Design Studio and teach frontend development at Le Wagon Melbourne.', 'I’m passionate about building rigorous and scalable design systems that entire organisations can understand and benefit from.']
 }
 
 export const whatElse = {
 	title: 'Other Than Work',
-	content: ['I like to boulder, surf and stay pretty active. Exploring the mental health benefits of plant medicine and cooking my way through Ottolenghi’s Simple are also big on my todo list.', "While living in China I put a lot of time into studying Mandarin, so I aggressively try to maintain by learning Chinese pop songs and eves dropping in the CBD.", "At the moment my interests are around design systems, micro dosing, React.js and fighting food packaging waste. I’ve got an idea, if you want to hear it!"]
+	content: ['I like to boulder, surf and stay pretty active. Exploring the mental health benefits of plant medicine and cooking my way through Ottolenghi’s Simple are also big on my todo list.', "While living in China I put a lot of time into studying Mandarin, so I aggressively try to maintain this by learning Chinese pop songs and eves dropping in the CBD.", "At the moment my interests are in design systems, micro dosing, React.js and fighting food packaging waste. I’ve got an idea, if you want to hear it!"]
 }
 
 export const tools = [css, figma, html, javascript, medium, react, styledComponents, gatsby, reactSpring];
