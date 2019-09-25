@@ -26,7 +26,7 @@ const IndexWrapper = styled.div`
   ${media.small`
     display: flex;
     flex-direction: column-reverse;
-    padding: 1em 1em 6em 1em;
+    padding: 1em 1em 8em 1em;
   `}
 `
 
