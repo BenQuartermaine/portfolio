@@ -33,6 +33,10 @@ const ResponsiveNavStyles = styled(animated.div)`
   `}
   ${media.small`
     width: 100%;
+    & div:first-child {
+      display: flex;
+      flex-direction: column;
+    }
   `}
 `
 

@@ -27,11 +27,12 @@ const HeaderWrapper = styled.header`
 const BurgerWrapper = styled.div`
   display: none;
   ${media.small`
-    display: block;
+    display: flex;
+
   `}
 `;
 
-const NavigationWrapper = styled.div`
+const NavigationDisplay = styled.div`
   display: block;
   ${media.small`
     display: none;
@@ -42,9 +43,9 @@ const Header = ({ path }) => {
   return (
     <HeaderWrapper>
       <HeaderText style={{fontSize: '36px'}}><Link to="/">BQ</Link></HeaderText>
-      <NavigationWrapper>
+      <NavigationDisplay>
         <Navigation path={path} />
-      </NavigationWrapper>
+      </NavigationDisplay>
       <BurgerWrapper>
         <BurgerMenu path={path} />
       </BurgerWrapper>

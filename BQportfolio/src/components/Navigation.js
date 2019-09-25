@@ -18,7 +18,7 @@ const Navigation = ({ color, path }) => {
 		}
 	
 		${media.small`
-			flex-direction: column;
+			// flex-direction: column;
 			& a {
 				border-bottom: 2px solid ${colors.black};
 		`}

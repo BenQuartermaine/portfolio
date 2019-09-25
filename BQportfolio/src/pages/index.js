@@ -30,21 +30,13 @@ const IndexWrapper = styled.div`
   `}
 `
 
-
-const BurgerWrapper = styled.div`
-  display: none;
-  ${media.small`
-    display: flex;
-    justify-content: flex-end;
-  `}
-`;
-
 const NavigationWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   z-index: 1;
+
   ${media.small`
-    display: none;
+    justify-content: center;
   `}
 `;
 
@@ -55,9 +47,6 @@ const IndexPage = props => (
     <NavigationWrapper>
       <Navigation path={ props.path } />
     </NavigationWrapper>
-    <BurgerWrapper>
-      <BurgerMenu path={ props.path } /> 
-    </BurgerWrapper>
     <VideoBackground />
   </IndexWrapper>
 )
