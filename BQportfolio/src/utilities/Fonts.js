@@ -6,7 +6,7 @@ import { animated } from 'react-spring'
 
 export const fontsize = {
 	hero: '52px',
-	header: '32px',
+	header: '36px',
 	subheader: '24px',
 	body: '18px'
 }
@@ -25,7 +25,6 @@ export const HeroText = styled.h1`
 
 	${media.med`
 		font-size: ${fontsize.header};
-		font-weight: 400;
 	`}
 `;
 
@@ -36,7 +35,6 @@ export const HeaderText = styled.h1`
 
 	${media.med`
 		font-size: ${fontsize.subheader};
-		font-weight: 400;
 	`}
 `;
 

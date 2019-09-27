@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import ProjectCard from "../components/ProjectCard"
 import { HeroTextUnderlined } from '../utilities'
-import { wholefoods, mofarm, coroster } from '../assets/content'
+import { wholefoods, mofarm, coroster, ecze } from '../assets/content'
 
 
 const Work = props => {
@@ -11,6 +11,7 @@ const Work = props => {
 			<ProjectCard project={ coroster } />
 			<ProjectCard project={ wholefoods } />
 			<ProjectCard project={ mofarm } />
+			<ProjectCard project={ ecze } />
 		</Layout>
 	)
 }

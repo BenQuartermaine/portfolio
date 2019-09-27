@@ -1,7 +1,7 @@
 import eczeCover from './images/ecze-cover.png'
-import wholefoodsCover from './images/organicWholefoods.png'
-import corosterCover from './images/corosterCover.png'
+import wholefoodsCover from './images/organic-wholefoods-cover.png'
 import mofarmCover from './images/mofarmCover.png'
+import corosterSketch from './images/corosterCover.png'
 // TOOLS IMAGES IMPORT
 import css from './portfolio-icons/css.png'
 import figma from './portfolio-icons/figma.png'
@@ -41,34 +41,34 @@ export const wholefoods = {
 	description: 'How might we improve access to products for people following a low-FODMAP diet so that they can better meet their dieting requirements?',
 	date: 'April, 2019',
 	imageOne: `${wholefoodsCover}`,
-	linkText: 'Read on Medium',
+	linkText: 'Read the Case Study',
 	link: 'https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1',
-	tags: ['UX Design']
+	tags: ['UX Research, UX Design']
 }
 export const ecze = {
 	title: 'Ecze',
-	description: 'How might we improve access to holistic solutions for Eczema so that sufferers can reduce their eczema related anxiety?',
+	description: 'Holistic approaches to Eczema are sparse. Ecze is trying to change this by offering a platform for everything related to managing Eczema.',
 	date: 'July, 2019',
 	imageOne: `${eczeCover}`,
 	linkText: 'View the Website',
 	link: 'http://ecze.netlify.com/',
-	tags: ['Frontend Development']
+	tags: ['UI Design, Frontend Development']
 }
 export const coroster = {
-	title: 'CoRoster',
+	title: 'CoRoster: Humanising Rosters',
 	description: 'How might we improve the rostering experience for Police Officers so that they enjoy a better work-life balance?',
 	date: 'September, 2019',
-	imageOne: `${corosterCover}`,
-	linkText: 'Read on Medium',
+	imageOne: `${corosterSketch}`,
+	linkText: 'Read the Case Study',
 	link: 'https://medium.com/@BQWA/ux-case-study-shift-work-police-officers-3c4ac0cdaa42',
-	tags: ['UX Design']
+	tags: ['UX Research, UX Design']
 }
 export const mofarm = {
-	title: 'MoFarm',
-	description: 'The process of applying a Western growth model to a Chinese social problem and how it didn’t work',
+	title: 'Mandala Group: MoFarm',
+	description: 'A research project centered on food security and Left Behind Children in rural China.',
 	date: 'October, 2018',
 	imageOne: `${mofarmCover}`,
-	linkText: 'Read on Medium',
+	linkText: 'Read the Case Study',
 	link: 'https://medium.com/@BQWA/ux-case-study-mofarm-bff51d2f4992',
 	tags: ['UX Research']
 }

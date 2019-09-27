@@ -2,7 +2,6 @@ import React from "react"
 import BurgerMenu from "../components/BurgerMenu"
 import LandingText from "../components/LandingText"
 import Navigation from "../components/Navigation"
-import VideoBackground from "../components/VideoBackground"
 import { colors, media } from "../utilities"
 import styled from "styled-components"
 
@@ -15,24 +14,18 @@ const IndexWrapper = styled.div`
   background: ${colors.black};
   padding: 2em;
   display: flex;
-  justify-content: space-between;
-  
-  
-  ${media.med`
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 2em;
-  `}  
+  align-items: center;
+  justify-content: center;
+
   ${media.small`
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 1em 1em 8em 1em;
+    padding: 24px;
   `}
 `
 
 const NavigationWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   z-index: 1;
 
   ${media.small`
@@ -47,7 +40,6 @@ const IndexPage = props => (
     <NavigationWrapper>
       <Navigation path={ props.path } />
     </NavigationWrapper>
-    <VideoBackground />
   </IndexWrapper>
 )
 

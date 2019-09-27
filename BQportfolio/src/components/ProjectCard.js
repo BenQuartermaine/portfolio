@@ -1,19 +1,34 @@
 import React, { useState } from "react"
-import { BodyText, HeaderText, SubheaderText, LinkTextStyle, colors } from '../utilities';
+import { BodyText, HeaderText, SubheaderText, LinkTextStyle, colors, media } from '../utilities';
 import styled from 'styled-components';
 import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
 
-const CardWrapper = styled.div`
-	max-width: 720px;
+const CardWrapper = styled(animated.div)`
+	max-width: 800px;
 	margin: 0 auto;
-	padding: 32px 0em;
+	padding: 24px;
+	border-radius: 4px;
+	margin-bottom: 24px;
+
+	${media.small`
+		padding: 16px;
+	`}
 `
 const CardHeader = styled.div`
 	& p:first-child {
 		display: flex;
 		justify-content: flex-end;
 		padding-bottom: 8px;
+	}	
+	& p:last-child {
+		display: flex;
+		justify-content: flex-end;
+		padding: 16px 0px;
+		
+		${media.small`
+			justify-content: flex-start;
+		`}
 	}
 `
 const CardContent = styled.a`
@@ -33,18 +48,23 @@ const HoverDiv = styled(animated.div)`
 	}
 
 `
-const Image = styled.div`
+const BodyTextGeorgia = styled(BodyText)`
+	font-family: 'Georgia';
+`
+
+const Image = styled.img`
 	width: 100%;
-  height: 400px;
+  height: auto;
 	background-size: cover;
-  background-position: center; 
+  background-position: center;
+  margin-bottom: 0px; 
 `
 const HeaderSubheader = styled.div`
-	padding-bottom: 16px;
+	// padding-bottom: 8px;
 `
 const LinkWrapper = styled(animated.div)`
-	padding-top: 24px;
-	padding-right: 8px;
+	padding-top: 16px;
+	padding-right: 4px;
 	& .flex-end {
 		display: flex;
 		justify-content: flex-end;
@@ -59,18 +79,21 @@ const LinkWrapper = styled(animated.div)`
 
 const ProjectCard = ({ project }) => {
 		 const [isHovered, setHovered] = useState(false);
-		 const buttonAnimation = useSpring({ transform: isHovered ? `translate3d(8px, -8px, 0px)` : `translate3d(0px, 0px, 0px)` })
-		 const hoverAnimation = useSpring({ background: isHovered ? `rgba(0, 0, 0, 1)` : `rgba(255, 255, 255, 0)` })
-		 const textAnimation = useSpring({ opacity: isHovered ? `1` : `0` })
+		 const buttonAnimation = useSpring({ transform: isHovered ? `scale3d(4px, -4px, 8px)` : `translate3d(0px, 0px, 0px)` })
+		 const hoverAnimation = useSpring({ boxShadow: isHovered ? `0px 0px 30px rgba(0, 0, 0, 0.25)` : `0px 0px 10px rgba(0, 0, 0, 0.25)` })
 		 const underlineAnimation = useSpring({ textDecoration: isHovered ? `underline` : `underline` })
 	 
 	  return (
-	  <CardWrapper>
+	  <CardWrapper style={hoverAnimation}>
+
 		  <CardHeader>
-			  <BodyText>{project.date}</BodyText>
 			  <HeaderSubheader>
-				  <HeaderText>{project.title}</HeaderText>
-				  <BodyText>{project.description}</BodyText>
+			  		<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
+					  <HeaderText>{project.title}</HeaderText>
+					  <BodyText>{project.description}</BodyText>
+			  	<div>
+				  	<BodyTextGeorgia>{project.tags.map(tag => `${tag} `)}</BodyTextGeorgia>
+			  	</div>
 			  </HeaderSubheader>
 			 </CardHeader>
 			 <CardContent
@@ -79,13 +102,7 @@ const ProjectCard = ({ project }) => {
     	 	onMouseEnter={() => setHovered(true)}
 	     	onMouseLeave={() => setHovered(false)}
 			 >
-				<Image style={{backgroundImage: `url(${project.imageOne})`}}>
-					<HoverDiv style={hoverAnimation}>
-					<animated.div style={textAnimation}>
-						<HeaderText style={{color: `${colors.almostWhite}`}}>{project.tags.map(tag => `${tag} `)}</HeaderText>
-					</animated.div>
-					</HoverDiv>
-				</Image>
+					<Image src={project.imageOne} />
 			  <LinkWrapper style={buttonAnimation}>
 			  	<LinkTextStyle 
 			  		style={underlineAnimation}
@@ -96,6 +113,7 @@ const ProjectCard = ({ project }) => {
 			  	</LinkTextStyle>
 			  </LinkWrapper>
 			 </CardContent>
+
 	  </CardWrapper>
 	)
 }
