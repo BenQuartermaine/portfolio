@@ -7,7 +7,6 @@ import styled from "styled-components"
 
 
 
-
 const IndexWrapper = styled.div`
   height: 100vh;
   width: 100vw;
@@ -29,7 +28,12 @@ const NavigationWrapper = styled.div`
   z-index: 1;
 
   ${media.small`
-    justify-content: center;
+    // position: initial;
+
+    // // display: flex;
+    // // // flex-direction: column;
+    // // justify-content: center;
+
   `}
 `;
 

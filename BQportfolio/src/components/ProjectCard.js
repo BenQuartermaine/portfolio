@@ -5,7 +5,7 @@ import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
 
 const CardWrapper = styled(animated.div)`
-	max-width: 800px;
+	max-width: 820px;
 	margin: 0 auto;
 	padding: 24px;
 	border-radius: 4px;
