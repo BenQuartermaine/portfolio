@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BodyText, HeaderText, SubheaderText, LinkTextStyle, colors, media } from '../utilities';
+import { BodyText, HeaderText, SubheaderText, LinkTextStyle, colors, media, fontsize } from '../utilities';
 import styled from 'styled-components';
 import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
@@ -7,30 +7,14 @@ import { animated, useSpring } from 'react-spring'
 const CardWrapper = styled(animated.div)`
 	max-width: 820px;
 	margin: 0 auto;
-	padding: 24px;
+	padding: 32px 24px;
 	border-radius: 4px;
-	margin-bottom: 24px;
 
 	${media.small`
-		padding: 16px;
+		padding: 32px 16px;
 	`}
 `
-const CardHeader = styled.div`
-	& p:first-child {
-		display: flex;
-		justify-content: flex-end;
-		padding-bottom: 8px;
-	}	
-	& p:last-child {
-		display: flex;
-		justify-content: flex-end;
-		padding: 16px 0px;
-		
-		${media.small`
-			justify-content: flex-start;
-		`}
-	}
-`
+
 const CardContent = styled.a`
 	text-decoration: none;
 	color: ${colors.black};
@@ -50,6 +34,7 @@ const HoverDiv = styled(animated.div)`
 `
 const BodyTextGeorgia = styled(BodyText)`
 	font-family: 'Georgia';
+	padding-bottom: 16px;
 `
 
 const Image = styled.img`
@@ -60,7 +45,10 @@ const Image = styled.img`
   margin-bottom: 0px; 
 `
 const HeaderSubheader = styled.div`
-	// padding-bottom: 8px;
+	& div:last-child {
+		display: flex;
+		justify-content: flex-end;
+	}
 `
 const LinkWrapper = styled(animated.div)`
 	padding-top: 16px;
@@ -80,22 +68,19 @@ const LinkWrapper = styled(animated.div)`
 const ProjectCard = ({ project }) => {
 		 const [isHovered, setHovered] = useState(false);
 		 const buttonAnimation = useSpring({ transform: isHovered ? `scale3d(4px, -4px, 8px)` : `translate3d(0px, 0px, 0px)` })
-		 // const hoverAnimation = useSpring({ backgroundColor: isHovered ? `white` : `${colors.almostWhite}` })
 		 const underlineAnimation = useSpring({ textDecoration: isHovered ? `underline` : `underline` })
 	 
 	  return (
 	  <CardWrapper>
-
-		  <CardHeader>
 			  <HeaderSubheader>
-			  		<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
 					  <HeaderText>{project.title}</HeaderText>
-					  <BodyText>{project.description}</BodyText>
+					  {project.description.map(text => 
+			         <BodyText style={{paddingBottom: fontsize.body}}>{text}</BodyText>
+			        )}
 			  	<div>
-				  	<BodyTextGeorgia>{project.tags.map(tag => `${tag} `)}</BodyTextGeorgia>
+			  		<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
 			  	</div>
 			  </HeaderSubheader>
-			 </CardHeader>
 			 <CardContent
 			 	href={project.link}
 			 	target="_blank"

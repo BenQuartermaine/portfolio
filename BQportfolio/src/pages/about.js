@@ -12,23 +12,23 @@ import { media } from '../utilities'
 const SectionWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 40px 0em;
+  padding: 16px 0em;
 `
 const ContentWrapper = styled.div`
   
 `
 const TitleImage = styled.div`
   display: flex;
-  & img:first-child {
-    padding-right: 16px;
+  & img:last-child {
+    margin-left: 24px;
 
   }
 
   ${media.med`
     flex-direction: column;
-    & img:first-child {
-        padding-right: 0px;
-        padding-bottom: 16px;
+    & img:last-child {
+        margin-left: 0px;
+        margin-bottom: 24px;
         
       }
     `
@@ -49,13 +49,13 @@ const About = props => (
     <SectionWrapper>
       <HeroText>{about.title}</HeroText>
       <TitleImage>
-        <Image src={me} />
         <div>
           {about.content.map(text => 
         	   <SubheaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>{text}</SubheaderText>
             )}
           
         </div>
+        <Image src={me} />
       </TitleImage>
     </SectionWrapper>
     <SectionWrapper>

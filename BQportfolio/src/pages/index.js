@@ -14,7 +14,7 @@ import { wholefoods, mofarm, coroster, ecze } from '../assets/content'
 
 
 const AboveWrapper = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 110px);
   min-width: 100vw;
   background: ${colors.black};
 
@@ -24,7 +24,7 @@ const AboveWrapper = styled.div`
 `;
 const BelowWrapper = styled.div`
   background: ${colors.almostWhite};
-
+  padding: 40px 0px;
 `;
 
 const TextWrapper = styled.div`
@@ -38,8 +38,8 @@ const TextWrapper = styled.div`
 
 const IndexPage = props => (
   <Fragment>
-    <AboveWrapper>
       <Header />
+    <AboveWrapper>
       <TextWrapper>
         <LandingText />
       </TextWrapper>
