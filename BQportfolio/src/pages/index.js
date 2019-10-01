@@ -1,50 +1,57 @@
-import React from "react"
+import React, { Fragment } from "react"
 import BurgerMenu from "../components/BurgerMenu"
 import LandingText from "../components/LandingText"
 import Navigation from "../components/Navigation"
+import ProjectCard from "../components/ProjectCard"
+import Header from "../components/header"
+import Footer from "../components/Footer"
 import { colors, media } from "../utilities"
 import styled from "styled-components"
+import { wholefoods, mofarm, coroster, ecze } from '../assets/content'
 
 
 
-const IndexWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
+
+
+const AboveWrapper = styled.div`
+  min-height: 100vh;
+  min-width: 100vw;
   background: ${colors.black};
-  padding: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   ${media.small`
     padding: 24px;
   `}
-`
+`;
+const BelowWrapper = styled.div`
+  background: ${colors.almostWhite};
 
-const NavigationWrapper = styled.div`
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 1;
+`;
 
-  ${media.small`
-    // position: initial;
-
-    // // display: flex;
-    // // // flex-direction: column;
-    // // justify-content: center;
-
-  `}
+const TextWrapper = styled.div`
+  min-height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
 `;
 
 
 const IndexPage = props => (
-  <IndexWrapper>
-    <LandingText />
-    <NavigationWrapper>
-      <Navigation path={ props.path } />
-    </NavigationWrapper>
-  </IndexWrapper>
+  <Fragment>
+    <AboveWrapper>
+      <Header />
+      <TextWrapper>
+        <LandingText />
+      </TextWrapper>
+    </AboveWrapper>
+    <BelowWrapper>
+      <ProjectCard project={ coroster } />
+      <ProjectCard project={ wholefoods } />
+      <ProjectCard project={ mofarm } />
+      <ProjectCard project={ ecze } />
+    </BelowWrapper>
+    <Footer />
+  </Fragment>
 )
 
 export default IndexPage

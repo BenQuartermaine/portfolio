@@ -80,11 +80,11 @@ const LinkWrapper = styled(animated.div)`
 const ProjectCard = ({ project }) => {
 		 const [isHovered, setHovered] = useState(false);
 		 const buttonAnimation = useSpring({ transform: isHovered ? `scale3d(4px, -4px, 8px)` : `translate3d(0px, 0px, 0px)` })
-		 const hoverAnimation = useSpring({ boxShadow: isHovered ? `0px 0px 30px rgba(0, 0, 0, 0.25)` : `0px 0px 10px rgba(0, 0, 0, 0.25)` })
+		 // const hoverAnimation = useSpring({ backgroundColor: isHovered ? `white` : `${colors.almostWhite}` })
 		 const underlineAnimation = useSpring({ textDecoration: isHovered ? `underline` : `underline` })
 	 
 	  return (
-	  <CardWrapper style={hoverAnimation}>
+	  <CardWrapper>
 
 		  <CardHeader>
 			  <HeaderSubheader>

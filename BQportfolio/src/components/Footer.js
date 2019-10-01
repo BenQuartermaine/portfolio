@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const FooterWrapper = styled.footer`
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	height: 110px;
 	background: ${colors.black};
 	color: ${colors.almostWhite};
@@ -14,7 +14,7 @@ const FooterWrapper = styled.footer`
 
 const Footer = () => (
   <FooterWrapper>
-  	<BodyText>Designed and built by <a style={{color: `${colors.almostWhite}`}} target="_blank" href="https://medium.com/@BQWA">BQ</a></BodyText>
+  	<BodyText>Designed and built by <a style={{color: `${colors.almostWhite}`}} target="_blank" href="https://github.com/BenQuartermaine">BQ</a></BodyText>
   </FooterWrapper>
 )
 
