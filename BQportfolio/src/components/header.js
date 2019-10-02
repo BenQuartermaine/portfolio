@@ -42,7 +42,7 @@ const NavigationDisplay = styled.div`
 const Header = ({ path }) => {
   return (
     <HeaderWrapper>
-      <HeaderText><Link to="/">{path === '/' ? '' : 'BQ'}</Link></HeaderText>
+      <HeaderText><Link to="/">{path !== '/' ? 'BQ' : ''}</Link></HeaderText>
       <NavigationDisplay>
         <Navigation path={path} />
       </NavigationDisplay>
