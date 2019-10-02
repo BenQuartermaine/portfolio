@@ -24,21 +24,22 @@ const AboveWrapper = styled.div`
 `;
 const BelowWrapper = styled.div`
   background: ${colors.almostWhite};
-  padding: 40px 0px;
+  padding: 32px 0px;
 `;
 
 const TextWrapper = styled.div`
   min-height: calc(100vh - 110px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
+  padding: 32px;
+
+  ${media.med`
+    padding: 16px;
+  `}
 `;
 
 
 const IndexPage = props => (
   <Fragment>
-      <Header />
+      <Header path={props.path} />
     <AboveWrapper>
       <TextWrapper>
         <LandingText />
