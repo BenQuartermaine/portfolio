@@ -41,7 +41,7 @@ export const wholefoods = {
 	description: ['How might we improve access to products for people following diet so that they can better meet their dieting requirements?', 'In this project I researched consumers shopping habits and tried to understand why they shopped at independent grocers. The research revealed consumers were coming for several reasons but the most common was diet related. Consumers were trying to find products that they couldn’t find elsewhere to aid their diet.', 'My role in this project was UX Research, UX Design and HIFI wireframe development. Deliverables include primary research, personas, storyboards, LOFI through HIFI wireframes.'],
 	date: 'January - April, 2019',
 	imageOne: `${wholefoodsCover}`,
-	linkText: 'Read the Case Study',
+	linkText: 'Read on Medium',
 	link: 'https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1',
 	tags: ['UX Research, UX Design']
 }
@@ -59,13 +59,13 @@ export const coroster = {
 	description: ['How might we improve the rostering experience for Police Officers so that they enjoy a better work-life balance?','A project on understanding the shift preferences of police officers and the work-life balance that results. My role in this project was UX Research and UX Design. Deliverables include primary research, personas, design principles, wireframes and usability testing.'],
 	date: 'August - September, 2019',
 	imageOne: `${corosterSketch}`,
-	linkText: 'Read the Case Study',
+	linkText: 'Read on Medium',
 	link: 'https://medium.com/@BQWA/ux-case-study-shift-work-police-officers-3c4ac0cdaa42',
 	tags: ['UX Research, UX Design']
 }
 export const mofarm = {
 	title: 'Mandala Group: MoFarm',
-	description: ['How might we reduce the Left Behind Children issue in rural China?', 'China’s economic growth has been staggering for decades. However,  It has created a large income disparities where parents leave their rural towns in search of higher wages in the cities, leaving their children behind. This project researches this problem and offers solutions to it.', 'My role in this project was lead researcher. Deliverables include primary research (interviews, shadowing and immersion), hypothesis testing and idea iteration. The entire project was done on a shoestring budget and employs lean startup methodologies.'],
+	description: ['How might we improve the Left Behind Children issue in rural China?', 'China’s economic growth has been staggering for decades. Hundreds of millions of people have been lifted out of poverty, but it has also created large income disparities where parents leave their rural towns in search of higher wages, often leaving their children behind. With over 66 million Left Behind Children, this project researches the problem and offers solutions to it.', 'My role in this project was lead researcher. Deliverables include primary research (interviews, shadowing and immersion), hypothesis testing and idea iteration. The entire project was done on a shoestring budget and employs lean startup methodologies.'],
 	date: 'January - October, 2018',
 	imageOne: `${mofarmCover}`,
 	linkText: 'Read the Case Study',
