@@ -5,11 +5,17 @@ import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
 
 const CardWrapper = styled(animated.div)`
-	max-width: 820px;
-	margin: 0 auto;
-	padding: 32px 24px;
+	max-width: 960px;
+	margin: 24px auto;
+	padding: 32px 32px;
 	border-radius: 4px;
+	display: flex;
+	background: white;
 
+	${media.med`
+		flex-direction: column;
+		align-items: center;
+	`}
 	${media.small`
 		padding: 32px 16px;
 	`}
@@ -18,8 +24,7 @@ const CardWrapper = styled(animated.div)`
 const CardContent = styled.a`
 	text-decoration: none;
 	color: ${colors.black};
-`
-
+`	
 const HoverDiv = styled(animated.div)`
 	display: flex;
 	align-items: center;
@@ -35,34 +40,47 @@ const HoverDiv = styled(animated.div)`
 const BodyTextGeorgia = styled(BodyText)`
 	font-family: 'Georgia';
 	padding-bottom: 16px;
+	text-align: right;
 `
 
 const Image = styled.img`
-	width: 100%;
-  height: auto;
-	background-size: cover;
+height: auto;
+width: 500px;
+  background-size: cover;
   background-position: center;
   margin-bottom: 0px; 
 `
 const HeaderSubheader = styled.div`
+	padding-left: 24px;
 	& div:last-child {
+		display: flex;
+		justify-content: flex-end;
+	}
+	& div:first-child {
 		display: flex;
 		justify-content: flex-end;
 	}
 `
 const LinkWrapper = styled(animated.div)`
-	padding-top: 16px;
 	padding-right: 4px;
 	& .flex-end {
 		display: flex;
 		justify-content: flex-end;
-		align-items: center;
-		padding: 0px;
 	}
 	& img {
 		margin-bottom: 0px;
 		height: 25px;
 	}
+`
+const ImageContainer = styled.div`
+	width: 250px;
+	height: 250px;
+
+	${media.med`
+		padding-bottom: 16px;
+		width: 100%;
+		height: auto;
+	`}
 `
 
 const ProjectCard = ({ project }) => {
@@ -72,23 +90,23 @@ const ProjectCard = ({ project }) => {
 	 
 	  return (
 	  <CardWrapper>
-			  <HeaderSubheader>
-					  <HeaderText>{project.title}</HeaderText>
-					  {project.description.map(text => 
-			         <BodyText style={{paddingBottom: fontsize.body}}>{text}</BodyText>
-			        )}
-			  	<div>
-			  		<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
-			  	</div>
-			  </HeaderSubheader>
 			 <CardContent
 			 	href={project.link}
 			 	target="_blank"
     	 	onMouseEnter={() => setHovered(true)}
 	     	onMouseLeave={() => setHovered(false)}
 			 >
+				 <ImageContainer>
 					<Image src={project.imageOne} />
-			  <LinkWrapper style={buttonAnimation}>
+				 </ImageContainer>
+			 </CardContent>
+			<HeaderSubheader>
+				<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
+				<HeaderText>{project.title}</HeaderText>
+				{project.description.map(text => 
+					<BodyText style={{paddingBottom: fontsize.body}}>{text}</BodyText>
+				)}
+				<LinkWrapper style={buttonAnimation}>
 			  	<LinkTextStyle 
 			  		style={underlineAnimation}
 			  		className="flex-end"
@@ -97,8 +115,7 @@ const ProjectCard = ({ project }) => {
 			  		<img src={diagonalArrow} alt=""/>
 			  	</LinkTextStyle>
 			  </LinkWrapper>
-			 </CardContent>
-
+			</HeaderSubheader>
 	  </CardWrapper>
 	)
 }
