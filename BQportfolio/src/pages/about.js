@@ -1,9 +1,7 @@
 import React from "react"
-import { HeroText, HeaderText, SubheaderText, BodyText, fontsize } from '../utilities'
+import { HeroText, SubheaderText, fontsize } from '../utilities'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import IconGrid from "../components/IconGrid"
-import SocialMedia from "../components/SocialMedia"
 import styled from 'styled-components'
 import { about, whatElse } from '../assets/content'
 import me from '../assets/images/me.png'
@@ -70,14 +68,6 @@ const About = props => (
           <SubheaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>
             I write sporadically on <a style={{color: 'black'}} target="_blank" href="https://medium.com/@BQWA">Medium</a>, push all my code to <a style={{color: 'black'}} target="_blank" href="https://github.com/BenQuartermaine">Github</a> and fluff myself up on <a style={{color: 'black'}} target="_blank" href="https://www.linkedin.com/in/benjaminquartermaine/">LinkedIn</a>.<br /><br /> For UX design projects, coffee and other enquiries, drop me an <a style={{color: 'black'}} target="_blank" href="mailto: ben.quartermaiune3@gmail.com">Email</a>.
           </SubheaderText>
-        </ContentWrapper>
-    </SectionWrapper>
-
-    <SectionWrapper>
-        <HeroText>Tools</HeroText>
-        <ContentWrapper>
-            <SubheaderText style={{fontWeight: '400', paddingBottom: fontsize.header}}>A few regular tools in the toolbelt</SubheaderText>
-            <IconGrid />
         </ContentWrapper>
     </SectionWrapper>
   </Layout>

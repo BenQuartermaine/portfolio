@@ -15,7 +15,7 @@ const Span = styled(animated.div)`
   flex-direction: column;
   width: 40px;
   padding-bottom: 8px;
-  border-bottom: 3px ${colors.almostWhite} solid;
+  border-bottom: 3px ${colors.black} solid;
   transform: rotate(180deg);
 `
 
@@ -26,7 +26,7 @@ const ResponsiveNavStyles = styled(animated.div)`
   top: 0;
   bottom: 0;
   width: 400px;
-  background: ${colors.black};
+  background: ${colors.almostWhite};
   padding: 100px 2em 2em 2em;
   ${media.med`
     width: 70%;

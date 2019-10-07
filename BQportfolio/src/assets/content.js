@@ -2,21 +2,6 @@ import eczeCover from './images/ecze-cover-color.png'
 import wholefoodsCover from './images/organic.png'
 import mofarmCover from './images/mofarm.png'
 import corosterSketch from './images/coroster.png'
-// TOOLS IMAGES IMPORT
-import css from './portfolio-icons/css.png'
-import figma from './portfolio-icons/figma.png'
-import gatsby from './portfolio-icons/gatsby.png'
-import html from './portfolio-icons/html.png'
-import javascript from './portfolio-icons/javascript.png'
-import medium from './portfolio-icons/medium.png'
-import reactSpring from './portfolio-icons/react-spring.png'
-import react from './portfolio-icons/react.png'
-import styledComponents from './portfolio-icons/styled-comp.png'
-// SOCIAL MEDIA ICONS
-import github from '../assets/portfolio-icons/github.svg'
-import linkedin from '../assets/portfolio-icons/linkedin.svg'
-import mailIcon from '../assets/portfolio-icons/mail-icon.svg'
-
 
 // ABOUT PAGE
 export const about = {
@@ -28,12 +13,6 @@ export const whatElse = {
 	title: 'Other Than Work',
 	content: ['I like to boulder, surf and stay pretty active. Exploring the mental health benefits of plant medicine and cooking my way through Ottolenghi’s Simple are also big on my todo list.', "While living in China I put a lot of time into studying Mandarin, so I aggressively try to maintain this by learning Chinese pop songs and eves dropping in the CBD.", "At the moment my interests are in design systems, micro dosing, React.js and fighting food packaging waste. I’ve got an idea, if you want to hear it!"]
 }
-
-export const tools = [css, figma, html, javascript, medium, react, styledComponents, gatsby, reactSpring];
-export const socialIcons = [mailIcon, github, medium, linkedin];
-
-
-
 
 // PROJECTS
 export const wholefoods = {
@@ -72,5 +51,3 @@ export const mofarm = {
 	link: 'https://medium.com/@BQWA/ux-case-study-mofarm-bff51d2f4992',
 	tags: ['UX Research']
 }
-
-

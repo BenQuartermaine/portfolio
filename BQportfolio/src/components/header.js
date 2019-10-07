@@ -7,20 +7,19 @@ import Navigation from './Navigation'
 
 
 const HeaderWrapper = styled.header`
+  z-index: 10;
   height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0em 32px;
-  color: ${colors.almostWhite};
-  background: ${colors.black};
+  background: ${colors.almostWhite};
   & a {
     text-decoration: none;
-    color: ${colors.almostWhite};
+    color: ${colors.black};
   }
   ${media.med`
     padding: 0em 16px;
-
   `}
 `;
 
@@ -28,7 +27,6 @@ const BurgerWrapper = styled.div`
   display: none;
   ${media.small`
     display: flex;
-
   `}
 `;
 
@@ -39,10 +37,10 @@ const NavigationDisplay = styled.div`
   `}
 `;
 
-const Header = ({ path }) => {
+const Header = ({ path, color }) => {
   return (
     <HeaderWrapper>
-      <HeaderText><Link to="/">{path !== '/' ? 'BQ' : ''}</Link></HeaderText>
+      <HeaderText><Link to="/">BQ</Link></HeaderText>
       <NavigationDisplay>
         <Navigation path={path} />
       </NavigationDisplay>

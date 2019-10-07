@@ -25,7 +25,7 @@ const Layout = ({ children, props }) => {
 
   return (
     <Background>
-      <Header siteTitle={data.site.siteMetadata.title} path={props.path} />
+      <Header siteTitle={data.site.siteMetadata.title} path={props.path} color={colors.almostWhite}/>
       <main style={{margin: '16px'}}>{children}</main>
       <Footer />
     </Background>

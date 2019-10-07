@@ -9,14 +9,10 @@ import { colors, media } from "../utilities"
 import styled from "styled-components"
 import { wholefoods, mofarm, coroster, ecze } from '../assets/content'
 
-
-
-
-
 const AboveWrapper = styled.div`
-  min-height: calc(100vh - 110px);
+  min-height: calc(50vh - 110px);
   min-width: 100vw;
-  background: ${colors.black};
+  background: ${colors.almostWhite};
 
   ${media.small`
     padding: 24px;
@@ -30,16 +26,17 @@ const BelowWrapper = styled.div`
 const TextWrapper = styled.div`
   min-height: calc(100vh - 110px);
   padding: 32px;
+  align-items: center;
+  display: flex;
 
   ${media.med`
     padding: 16px;
   `}
 `;
 
-
 const IndexPage = props => (
   <Fragment>
-      <Header path={props.path} />
+      <Header path={props.path} color={colors.almostWhite} />
     <AboveWrapper>
       <TextWrapper>
         <LandingText />

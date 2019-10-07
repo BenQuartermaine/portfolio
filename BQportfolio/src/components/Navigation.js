@@ -9,16 +9,15 @@ const Navigation = ({ color, path }) => {
 		& a {
 			transition: 0.2s;
 			font-size: ${fontsize.subheader};
-			color: ${colors.almostWhite};
+			color: ${colors.black};
 			margin: 0px 4px;
 			&:hover {
 				transition: 0.2s;
-				border-bottom: 2px solid ${colors.almostWhite};
+				border-bottom: 2px solid ${colors.black};
 			}
 		}
 	
 		${media.small`
-			// flex-direction: column;
 			& a {
 				border-bottom: 2px solid ${colors.black};
 		`}
@@ -35,7 +34,7 @@ const Navigation = ({ color, path }) => {
 					<LinkText 
 						key={i} 
 						to='/' 
-						style={{borderBottom: `2px solid ${colors.almostWhite}`}}
+						style={{borderBottom: `2px solid ${colors.black}`}}
 					>
 						{`${item.title}`}{" "}
 					</LinkText>
