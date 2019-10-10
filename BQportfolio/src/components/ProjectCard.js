@@ -10,11 +10,20 @@ const CardWrapper = styled(animated.div)`
 	padding: 32px 32px;
 	border-radius: 4px;
 	display: flex;
+	flex-direction: column;
 	background: white;
+
+	& p:first-child {
+		justify-content: flex-end;
+		display: flex;
+	}
 
 	${media.med`
 		flex-direction: column;
 		align-items: center;
+		& p:first-child {
+			padding-bottom: 16px;
+		}
 	`}
 	${media.small`
 		padding: 32px 16px;
@@ -39,27 +48,22 @@ const HoverDiv = styled(animated.div)`
 `
 const BodyTextGeorgia = styled(BodyText)`
 	font-family: 'Georgia';
-	padding-bottom: 16px;
-	text-align: right;
 `
 
 const Image = styled.img`
-height: auto;
-width: 500px;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 0px; 
+  	background-size: cover;
+  	background-position: center;
+  	margin-bottom: 0px; 
 `
 const HeaderSubheader = styled.div`
-	padding-left: 24px;
+	display: flex;
 	& div:last-child {
 		display: flex;
 		justify-content: flex-end;
 	}
-	& div:first-child {
-		display: flex;
-		justify-content: flex-end;
-	}
+	${media.med`
+		flex-direction: column;
+	`}
 `
 const LinkWrapper = styled(animated.div)`
 	padding-right: 4px;
@@ -72,50 +76,68 @@ const LinkWrapper = styled(animated.div)`
 		height: 25px;
 	}
 `
-const ImageContainer = styled.div`
-	width: 250px;
-	height: 250px;
+const ImageContainer = styled.a`
 
 	${media.med`
 		padding-bottom: 16px;
 		width: 100%;
 		height: auto;
 	`}
-`
+`;
+const FlexColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
+const TopDiv = styled.div`
+	margin-right: 16px;
+	${media.med`
+	margin-right: 0px;
+	padding-bottom: 16px;
+	`}
+`;
+
 
 const ProjectCard = ({ project }) => {
 		 const [isHovered, setHovered] = useState(false);
-		 const buttonAnimation = useSpring({ transform: isHovered ? `scale3d(4px, -4px, 8px)` : `translate3d(0px, 0px, 0px)` })
+		 const buttonAnimation = useSpring({ transform: isHovered ? `translate3d(4px, -4px, 8px)` : `translate3d(0px, 0px, 0px)` })
 		 const underlineAnimation = useSpring({ textDecoration: isHovered ? `underline` : `underline` })
 	 
 	  return (
 	  <CardWrapper>
-			 <CardContent
-			 	href={project.link}
-			 	target="_blank"
-    	 	onMouseEnter={() => setHovered(true)}
-	     	onMouseLeave={() => setHovered(false)}
-			 >
-				 <ImageContainer>
+		<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
+		<HeaderSubheader>
+			<TopDiv>
+				<ImageContainer
+				href={project.link}
+				target="_blank"
+				onMouseEnter={() => setHovered(true)}
+				onMouseLeave={() => setHovered(false)}
+				>
 					<Image src={project.imageOne} />
-				 </ImageContainer>
-			 </CardContent>
-			<HeaderSubheader>
-				<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
+				</ImageContainer>
+			</TopDiv>
+			<FlexColumn>
 				<HeaderText>{project.title}</HeaderText>
 				{project.description.map(text => 
 					<BodyText style={{paddingBottom: fontsize.body}}>{text}</BodyText>
 				)}
+				{project.tags.map(tag => 
+					<BodyTextGeorgia style={{paddingBottom: fontsize.body}}>{tag}</BodyTextGeorgia>
+				)}
 				<LinkWrapper style={buttonAnimation}>
-			  	<LinkTextStyle 
-			  		style={underlineAnimation}
-			  		className="flex-end"
-			  	>
-			  	{project.linkText}	
-			  		<img src={diagonalArrow} alt=""/>
-			  	</LinkTextStyle>
-			  </LinkWrapper>
-			</HeaderSubheader>
+				<LinkTextStyle 
+					style={underlineAnimation}
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+					className="flex-end"
+				>
+				{project.linkText}	
+					<img src={diagonalArrow} alt=""/>
+				</LinkTextStyle>
+				</LinkWrapper>
+			</FlexColumn>
+		</HeaderSubheader>
 	  </CardWrapper>
 	)
 }
