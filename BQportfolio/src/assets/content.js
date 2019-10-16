@@ -22,7 +22,7 @@ export const wholefoods = {
 	imageOne: `${wholefoodsCover}`,
 	linkText: 'Read on Medium',
 	link: 'https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1',
-	tags: ['UX Research, UX Design']
+	tags: ['UX Research, UI Design']
 }
 export const ecze = {
 	title: 'Ecze',
@@ -49,5 +49,5 @@ export const mofarm = {
 	imageOne: `${mofarmCover}`,
 	linkText: 'Read on Medium',
 	link: 'https://medium.com/@BQWA/ux-case-study-mofarm-bff51d2f4992',
-	tags: ['UX Research']
+	tags: ['Research, User Testing']
 }

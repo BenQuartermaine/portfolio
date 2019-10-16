@@ -132,7 +132,7 @@ const ProjectCard = ({ project }) => {
 					onMouseLeave={() => setHovered(false)}
 					className="flex-end"
 				>
-				{project.linkText}	
+					<a href={project.link} target="_blank" style={{color: 'black'}}>{project.linkText}</a>
 					<img src={diagonalArrow} alt=""/>
 				</LinkTextStyle>
 				</LinkWrapper>
