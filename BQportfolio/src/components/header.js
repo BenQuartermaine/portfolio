@@ -8,15 +8,15 @@ import Navigation from './Navigation'
 
 const HeaderWrapper = styled.header`
   z-index: 10;
-  height: 110px;
+  height: 90px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0em 32px;
-  background: ${colors.almostWhite};
+  background: ${colors.primary};
   & a {
     text-decoration: none;
-    color: ${colors.black};
+    color: ${colors.neutral};
   }
   ${media.med`
     padding: 0em 16px;
@@ -37,10 +37,10 @@ const NavigationDisplay = styled.div`
   `}
 `;
 
-const Header = ({ path, color }) => {
+const Header = ({ path }) => {
   return (
     <HeaderWrapper>
-      <HeaderText><Link to="/">BQ</Link></HeaderText>
+      {/* <HeaderText><Link to="/">BQ</Link></HeaderText> */}
       <NavigationDisplay>
         <Navigation path={path} />
       </NavigationDisplay>

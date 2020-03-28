@@ -2,29 +2,30 @@ import React from "react"
 import styled from "styled-components"
 import { LinkText, colors, fontsize, media } from "../utilities"
 
-const Navigation = ({ color, path }) => {
+const Navigation = ({ path }) => {
 	const NavigationWrapper = styled.div`
 		display: flex;
 		height: 42px;
 		& a {
 			transition: 0.2s;
 			font-size: ${fontsize.subheader};
-			color: ${colors.black};
+			color: ${colors.neutral};
 			margin: 0px 4px;
 			&:hover {
 				transition: 0.2s;
-				border-bottom: 2px solid ${colors.black};
+				border-bottom: 2px solid ${colors.neutral};
 			}
 		}
 	
 		${media.small`
 			& a {
-				border-bottom: 2px solid ${colors.black};
+				border-bottom: 2px solid ${colors.neutral};
 		`}
 	`
 	const navArray = [
+		{ title: "Home", link: "/"},
 		{ title: "Work", link: "/work/"},
-		{ title: "About / Contact", link: "/about/"},
+		{ title: "About", link: "/about/"},
 	]
 
 	return (
@@ -34,7 +35,7 @@ const Navigation = ({ color, path }) => {
 					<LinkText 
 						key={i} 
 						to='/' 
-						style={{borderBottom: `2px solid ${colors.black}`}}
+						style={{borderBottom: `2px solid ${colors.neutral}`}}
 					>
 						{`${item.title}`}{" "}
 					</LinkText>

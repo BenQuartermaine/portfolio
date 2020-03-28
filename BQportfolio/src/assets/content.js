@@ -6,12 +6,15 @@ import corosterSketch from './images/coroster.png'
 // ABOUT PAGE
 export const about = {
 	title: 'About',
-	content: ['Hi there. I’m Ben, a designer who codes. Previously I worked as a product designer for Mandala Group in Shanghai, China.', 'Currently, I design and build web apps for Dark Green Design Studio and teach frontend development at Le Wagon Melbourne.', 'I’m passionate about building rigorous and scalable design systems that entire organisations can understand and benefit from.']
+	content: [
+	'Hello. I’m Ben.', 
+	'Currently, I\'m a product designer at Ausmed and an occasional frontend teacher at Le Wagon Melbourne.',
+	'Previously, I was a product designer for Mandala Group in Shanghai. I’m passionate about building scalable design systems.']
 }
 
 export const whatElse = {
 	title: 'Other Than Work',
-	content: ['I like to boulder, surf and stay pretty active. Exploring the mental health benefits of plant medicine and cooking my way through Ottolenghi’s Simple are also big on my todo list.', "While living in China I put a lot of time into studying Mandarin, so I aggressively try to maintain this by learning Chinese pop songs and eves dropping in the CBD.", "At the moment my interests are in design systems, micro dosing, React.js and fighting food packaging waste. I’ve got an idea, if you want to hear it!"]
+	content: ['I like to boulder, surf and stay active. Exploring the mental health benefits of plant medicine and cooking my way through Ottolenghi’s Simple are big on my todo list.', "While living in China I put a lot of time into studying Mandarin, so I aggressively try to maintain this by learning Chinese pop songs and eves dropping in the CBD."]
 }
 
 // PROJECTS

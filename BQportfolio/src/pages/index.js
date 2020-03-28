@@ -1,53 +1,26 @@
 import React, { Fragment } from "react"
-import BurgerMenu from "../components/BurgerMenu"
 import LandingText from "../components/LandingText"
-import Navigation from "../components/Navigation"
-import ProjectCard from "../components/ProjectCard"
 import Header from "../components/header"
 import Footer from "../components/Footer"
-import { colors, media } from "../utilities"
+import { colors } from "../utilities"
 import styled from "styled-components"
-import { wholefoods, mofarm, coroster, ecze } from '../assets/content'
-
-const AboveWrapper = styled.div`
-  min-height: calc(50vh - 110px);
-  min-width: 100vw;
-  background: ${colors.almostWhite};
-
-  ${media.small`
-    padding: 24px;
-  `}
-`;
-const BelowWrapper = styled.div`
-  background: ${colors.almostWhite};
-  padding: 32px 0px;
-`;
 
 const TextWrapper = styled.div`
-  min-height: calc(100vh - 110px);
-  padding: 32px;
+  min-height: calc(100vh - 90px);
   align-items: center;
   display: flex;
+  padding: 32px;
+  background: ${colors.primary};
+  max-width: 700px;
 
-  ${media.med`
-    padding: 16px;
-  `}
 `;
 
 const IndexPage = props => (
   <Fragment>
-      <Header path={props.path} color={colors.almostWhite} />
-    <AboveWrapper>
-      <TextWrapper>
-        <LandingText />
-      </TextWrapper>
-    </AboveWrapper>
-    <BelowWrapper>
-      <ProjectCard project={ coroster } />
-      <ProjectCard project={ wholefoods } />
-      <ProjectCard project={ mofarm } />
-      <ProjectCard project={ ecze } />
-    </BelowWrapper>
+    <Header path={props.path} color={colors.primary} />
+    <TextWrapper>
+      <LandingText />
+    </TextWrapper>
     <Footer />
   </Fragment>
 )

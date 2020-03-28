@@ -5,8 +5,8 @@ import { media } from './Breakpoints'
 import { animated } from 'react-spring'
 
 export const fontsize = {
-	hero: '52px',
-	header: '36px',
+	hero: '40px',
+	header: '32px',
 	subheader: '24px',
 	body: '18px'
 }
@@ -22,6 +22,7 @@ export const HeroText = styled.h1`
 	font-size: ${fontsize.hero};
 	color: ${props => props.color};
 	font-family: 'Avenir';
+	font-weight: ${props => props.weight};
 
 	${media.med`
 		font-size: ${fontsize.header};
@@ -47,9 +48,9 @@ export const BodyText = styled.p`
 export const SubheaderText = styled.p`
 	${presets}
 	font-size: ${fontsize.subheader};
+	font-weight: 400;
 	font-family: 'Avenir';
 	color: ${props => props.color};
-
 `;
 
 export const LinkText = styled(Link)`
@@ -66,7 +67,7 @@ export const LinkText = styled(Link)`
 		cursor: pointer;
 		}	
 	}
-`;
+`
 
 // NON GATSBY LINK TEXT
 export const LinkTextStyle = styled(animated.p)`

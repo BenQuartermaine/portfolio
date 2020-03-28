@@ -9,7 +9,7 @@ import "./layout.css"
 
 
 const Background = styled.div`
-  background: ${colors.almostWhite};
+  background: ${colors.primary};
 `
 
 const Layout = ({ children, props }) => {
@@ -25,7 +25,7 @@ const Layout = ({ children, props }) => {
 
   return (
     <Background>
-      <Header siteTitle={data.site.siteMetadata.title} path={props.path} color={colors.almostWhite}/>
+      <Header siteTitle={data.site.siteMetadata.title} path={props.path} color={colors.primary}/>
       <main style={{margin: '16px'}}>{children}</main>
       <Footer />
     </Background>

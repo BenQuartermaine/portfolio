@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import { BodyText, HeaderText, SubheaderText, LinkTextStyle, colors, media, fontsize } from '../utilities';
+import { BodyText, HeaderText, LinkTextStyle, media, fontsize } from '../utilities';
 import styled from 'styled-components';
-import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
 
 const CardWrapper = styled(animated.div)`
-	max-width: 960px;
+	max-width: 700px;
 	margin: 24px auto;
 	padding: 32px 32px;
-	border-radius: 4px;
+	border-radius: 16px;
 	display: flex;
 	flex-direction: column;
 	background: white;
@@ -30,30 +29,13 @@ const CardWrapper = styled(animated.div)`
 	`}
 `
 
-const CardContent = styled.a`
-	text-decoration: none;
-	color: ${colors.black};
-`	
-const HoverDiv = styled(animated.div)`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	width: 100%;
-
-	& div:first-child {
-		text-align: center;
-	}
-
-`
-const BodyTextGeorgia = styled(BodyText)`
-	font-family: 'Georgia';
-`
 
 const Image = styled.img`
   	background-size: cover;
   	background-position: center;
-  	margin-bottom: 0px; 
+		margin-bottom: 0px; 
+		border-radius: 4px;
+		min-width: 200px;
 `
 const HeaderSubheader = styled.div`
 	display: flex;
@@ -105,7 +87,7 @@ const ProjectCard = ({ project }) => {
 	 
 	  return (
 	  <CardWrapper>
-		<BodyTextGeorgia>{project.date}</BodyTextGeorgia>
+		<BodyText>{project.date}</BodyText>
 		<HeaderSubheader>
 			<TopDiv>
 				<ImageContainer
@@ -122,9 +104,6 @@ const ProjectCard = ({ project }) => {
 				{project.description.map(text => 
 					<BodyText style={{paddingBottom: fontsize.body}}>{text}</BodyText>
 				)}
-				{project.tags.map(tag => 
-					<BodyTextGeorgia style={{paddingBottom: fontsize.body}}>{tag}</BodyTextGeorgia>
-				)}
 				<LinkWrapper style={buttonAnimation}>
 				<LinkTextStyle 
 					style={underlineAnimation}
@@ -133,7 +112,6 @@ const ProjectCard = ({ project }) => {
 					className="flex-end"
 				>
 					<a href={project.link} target="_blank" style={{color: 'black'}}>{project.linkText}</a>
-					<img src={diagonalArrow} alt=""/>
 				</LinkTextStyle>
 				</LinkWrapper>
 			</FlexColumn>
