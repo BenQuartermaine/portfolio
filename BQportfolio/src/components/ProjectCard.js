@@ -7,7 +7,7 @@ const CardWrapper = styled(animated.div)`
 	max-width: 700px;
 	margin: 24px auto;
 	padding: 32px 32px;
-	border-radius: 16px;
+	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
 	background: white;
