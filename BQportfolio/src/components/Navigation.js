@@ -9,17 +9,17 @@ const Navigation = ({ path }) => {
 		& a {
 			transition: 0.2s;
 			font-size: ${fontsize.subheader};
-			color: ${colors.neutral};
+			color: ${colors.light};
 			margin: 0px 4px;
 			&:hover {
 				transition: 0.2s;
-				border-bottom: 2px solid ${colors.neutral};
+				border-bottom: 2px solid ${colors.light};
 			}
 		}
 	
 		${media.small`
 			& a {
-				border-bottom: 2px solid ${colors.neutral};
+				border-bottom: 2px solid ${colors.light};
 		`}
 	`
 	const navArray = [
@@ -35,7 +35,7 @@ const Navigation = ({ path }) => {
 					<LinkText 
 						key={i} 
 						to='/' 
-						style={{borderBottom: `2px solid ${colors.neutral}`}}
+						style={{borderBottom: `2px solid ${colors.light}`}}
 					>
 						{`${item.title}`}{" "}
 					</LinkText>

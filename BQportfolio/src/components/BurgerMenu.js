@@ -15,7 +15,7 @@ const Span = styled(animated.div)`
   flex-direction: column;
   width: 40px;
   padding-bottom: 8px;
-  border-bottom: 3px ${colors.neutral} solid;
+  border-bottom: 3px ${colors.light} solid;
   transform: rotate(180deg);
 `
 
@@ -26,7 +26,7 @@ const ResponsiveNavStyles = styled(animated.div)`
   top: 0;
   bottom: 0;
   width: 400px;
-  background: ${colors.primary};
+  background: ${colors.green};
   padding: 100px 2em 2em 2em;
   ${media.med`
     width: 70%;
@@ -68,7 +68,7 @@ const BurgerMenu = ({ path }) => {
           ({ item, key, props }) =>
             item && (
               <ResponsiveNavStyles key={key} style={props}>
-                <Navigation color={colors.primary} path={currentPath} />
+                <Navigation color={colors.green} path={currentPath} />
               </ResponsiveNavStyles>
             )
         )}

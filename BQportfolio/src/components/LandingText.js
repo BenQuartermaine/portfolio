@@ -1,17 +1,26 @@
 import React from "react"
-import { HeroText, colors } from '../utilities';
+import { HeroText} from '../utilities';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const LandingTextWrapper = styled.div`
 	display: block;
   z-index: 4;
   max-width: 960px;
 `
-const LandingText = () => (
+const LandingText = props => (
   <LandingTextWrapper>
-    <HeroText color={colors.neutral}>Hello, I'm Ben.</HeroText>
-    <HeroText color={colors.neutral} weight={400}>I'm a Product designer who bridges the gap between design and development.</HeroText>
+    <HeroText color={props.leadColor}>{props.lead}</HeroText>
+    <HeroText color={props.subColor} weight={props.subWeight || 400}>{props.sub}</HeroText>
   </LandingTextWrapper>
 )
+
+LandingText.propTypes = {
+  leadColor: PropTypes.string,
+  subColor: PropTypes.string,
+  lead: PropTypes.string.isRequired,
+  sub: PropTypes.string.isRequired,
+  subWeight: PropTypes.number
+}
 
 export default LandingText

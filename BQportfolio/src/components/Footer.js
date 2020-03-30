@@ -7,13 +7,13 @@ const FooterWrapper = styled.footer`
 	align-items: center;
 	justify-content: center;
 	height: 68px;
-	background: ${colors.primary};
-	color: ${colors.secondary};
+	background: ${colors.green};
+	color: ${colors.brown};
 `;
 
 const Footer = () => (
   <FooterWrapper>
-  	<BodyText>Designed and developed by <a style={{color: `${colors.secondary}`}} target="_blank" href="https://github.com/BenQuartermaine">BQ</a></BodyText>
+  	<BodyText>Designed and developed by <a style={{color: `${colors.brown}`}} target="_blank" href="https://github.com/BenQuartermaine">BQ</a></BodyText>
   </FooterWrapper>
 )
 

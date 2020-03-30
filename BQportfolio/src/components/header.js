@@ -11,12 +11,12 @@ const HeaderWrapper = styled.header`
   height: 90px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 0em 32px;
-  background: ${colors.primary};
+  background: ${colors.green};
   & a {
     text-decoration: none;
-    color: ${colors.neutral};
+    color: ${colors.light};
   }
   ${media.med`
     padding: 0em 16px;
@@ -40,7 +40,6 @@ const NavigationDisplay = styled.div`
 const Header = ({ path }) => {
   return (
     <HeaderWrapper>
-      {/* <HeaderText><Link to="/">BQ</Link></HeaderText> */}
       <NavigationDisplay>
         <Navigation path={path} />
       </NavigationDisplay>

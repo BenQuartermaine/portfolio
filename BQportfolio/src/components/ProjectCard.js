@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BodyText, HeaderText, LinkTextStyle, media, fontsize } from '../utilities';
+import { BodyText, HeaderText, LinkTextStyle, media, fontsize, colors } from '../utilities';
 import styled from 'styled-components';
 import { animated, useSpring } from 'react-spring'
 
@@ -10,7 +10,7 @@ const CardWrapper = styled(animated.div)`
 	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
-	background: white;
+	background: ${colors.light};
 
 	& p:first-child {
 		justify-content: flex-end;

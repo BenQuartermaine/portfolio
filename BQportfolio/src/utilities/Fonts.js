@@ -5,7 +5,7 @@ import { media } from './Breakpoints'
 import { animated } from 'react-spring'
 
 export const fontsize = {
-	hero: '40px',
+	hero: '56px',
 	header: '32px',
 	subheader: '24px',
 	body: '18px'
