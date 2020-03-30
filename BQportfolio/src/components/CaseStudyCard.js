@@ -15,7 +15,7 @@ const CaseStudyCard = ({ project }) => {
   return (
     <div>
       <BkgImg>
-        <h1>{title}</h1>
+        div
         <img src={imageOne} alt=""/>
       </BkgImg>
       

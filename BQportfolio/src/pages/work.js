@@ -8,8 +8,7 @@ import { wholefoods, mofarm, coroster, ecze } from '../assets/content'
 const Work = props => {
 	return (
 		<Layout props={ props }>
-			
-			<CaseStudyCard project= { coroster } />
+			{/* <CaseStudyCard project= { coroster } /> */}
 			<ProjectCard project={ coroster } />
 			<ProjectCard project={ wholefoods } />
 			<ProjectCard project={ mofarm } />
